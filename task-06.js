@@ -1,13 +1,15 @@
 const numbers = [];
 let lastArg;
+let lastArgNum;
 let total = 0;
 
 while (lastArg !== null) {
   lastArg = prompt(`Введите число`);
-  if (isNaN(Number(lastArg))) {
+  lastArgNum = Number(lastArg);
+  if (isNaN(lastArgNum)) {
     alert(`Было введено не число, попробуйте еще раз`);
-  } else if (Number(lastArg) !== 0) {
-    numbers.push(Number(lastArg));
+  } else if (lastArgNum !== 0) {
+    numbers.push(lastArgNum);
   }
 }
 
